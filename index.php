@@ -3,8 +3,9 @@
 include __DIR__ . '/autoload.php';
 
 
-$db = new App\Db();
-$data = $db->query('SELECT * from news', [], 'App\Models\Article');
+$artile = new \App\Models\Article();
+$data = $artile->findAll();
+
 
 echo '<pre>';
 var_dump($data);

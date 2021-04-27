@@ -25,6 +25,9 @@ class Db
         foreach ($data as $row) {
             $item = new $class;
             foreach ($row as $key => $value) {
+                if (is_numeric($key)) {
+                    continue;
+                }
                 $item->$key = $value;
             }
             $ret[] = $item;
