@@ -8,6 +8,8 @@ use App\Db;
 
 class Article
 {
+    public static $table = 'news';
+
     public $id;
     public $title;
     public $content;
@@ -15,6 +17,6 @@ class Article
     public static function findAll()
     {
         $db = new Db();
-        return $db->query('SELECT * FROM news', [], '\App\Models\Article');
+        return $db->query('SELECT * FROM ' . Article::$table, [], '\App\Models\Article');
     }
 }
