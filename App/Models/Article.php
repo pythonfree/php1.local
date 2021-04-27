@@ -12,7 +12,7 @@ class Article
     public $title;
     public $content;
 
-    public function findAll()
+    public static function findAll()
     {
         $db = new Db();
         return $db->query('SELECT * FROM news', [], '\App\Models\Article');

@@ -3,8 +3,7 @@
 include __DIR__ . '/autoload.php';
 
 
-$artile = new \App\Models\Article();
-$data = $artile->findAll();
+$data = \App\Models\Article::findAll();
 
 
 echo '<pre>';
