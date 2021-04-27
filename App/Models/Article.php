@@ -17,6 +17,6 @@ class Article
     public static function findAll()
     {
         $db = new Db();
-        return $db->query('SELECT * FROM ' . Article::TABLE, [], Article::class);
+        return $db->query('SELECT * FROM ' . self::TABLE, [], self::class);
     }
 }
