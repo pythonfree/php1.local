@@ -40,6 +40,8 @@ abstract class Model
         $db = new Db();
         $db->execute($sql, $data);
 
+        $this->id = $db->getLastId();
+
     }
 
 }

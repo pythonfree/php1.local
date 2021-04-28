@@ -10,7 +10,7 @@ $article->title = 'Заголовок статьи';
 $article->content = 'Текст статьи';
 $article->insert();
 
-
+var_dump($article);
 
 //$data = \App\Models\Article::findAll();
 

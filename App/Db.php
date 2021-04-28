@@ -29,6 +29,9 @@ class Db
         return $sth->execute($data);
     }
 
-
+    public function getLastId()
+    {
+        return $this->dbh->lastInsertId();
+    }
 
 }
