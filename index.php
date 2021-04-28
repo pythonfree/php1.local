@@ -3,9 +3,18 @@
 include __DIR__ . '/autoload.php';
 
 
-$data = \App\Models\Article::findAll();
 
 
-echo '<pre>';
-var_dump($data);
-echo '</pre>';
+$article = new \App\Models\Article();
+$article->title = 'Заголовок статьи';
+$article->content = 'Текст статьи';
+$article->insert();
+
+
+
+//$data = \App\Models\Article::findAll();
+
+
+//echo '<pre>';
+//var_dump($data);
+//echo '</pre>';
