@@ -2,7 +2,8 @@
 
 include __DIR__ . '/autoload.php';
 
+$view = new \App\View();
 
-$articles = \App\Models\Article::findAll();
+$view->assign('articles', \App\Models\Article::findAll());
 
-include __DIR__ . '/templates/index.php';
+$view->display(__DIR__ . '/templates/index.php');

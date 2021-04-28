@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<?php foreach ($articles as $article): ?>
+<?php foreach ($this->data['articles'] as $article): ?>
 <article>
     <h2><?= $article->title; ?></h2>
     <p><?= $article->content; ?></p>
