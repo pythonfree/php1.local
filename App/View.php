@@ -15,7 +15,11 @@ class View
 
     public function __get($name)
     {
-        return $this->data[$name];
+        if (isset($this->data[$name])) {
+            return $this->data[$name];
+        } else {
+            return null;
+        }
     }
 
     public function display($template)
