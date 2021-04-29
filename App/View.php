@@ -18,6 +18,11 @@ class View
         return $this->data[$name] ?? null;
     }
 
+    public function __isset($name)
+    {
+        return isset($name, $this->data[$name]);
+    }
+
     public function display($template)
     {
         include $template;
