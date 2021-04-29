@@ -4,7 +4,7 @@
 namespace App;
 
 
-class View
+class View implements \Countable
 {
     protected $data = []; //данные для отображения
 
@@ -35,5 +35,11 @@ class View
     public function display($template)
     {
         echo  $this->render($template);
+    }
+
+
+    public function count()
+    {
+        return count($this->data);
     }
 }
