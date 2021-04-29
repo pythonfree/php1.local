@@ -6,7 +6,7 @@ namespace App;
 
 class View
 {
-    protected $data = [];
+    protected $data = []; //данные для отображения
 
     public function assign($name, $value)
     {
