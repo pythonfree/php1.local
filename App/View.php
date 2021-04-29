@@ -13,6 +13,11 @@ class View
         $this->data[$name] = $value;
     }
 
+    public function __get($name)
+    {
+        return $this->data[$name];
+    }
+
     public function display($template)
     {
         include $template;
