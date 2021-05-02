@@ -9,17 +9,15 @@
 </head>
 <body>
 
-<?php foreach ($this->articles as $article): ?>
 <article>
     <h2>
-        <a href="/article.php?id=<?=  $article->id; ?>">
-            <?= $article->title; ?>
+        <a href="/article.php?id=<?=  $this->article->id; ?>">
+            <?= $this->article->title; ?>
         </a>
     </h2>
-    <p><?= $article->content; ?></p>
+    <p><?= $this->article->content; ?></p>
 </article>
-<hr>
-<?php endforeach; ?>
+
 
 </body>
 </html>
