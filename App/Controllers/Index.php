@@ -9,7 +9,7 @@ use App\Models\Article;
 
 class Index extends Controller
 {
-    public function __invoke()
+    protected function handle()
     {
         $this->view->articles = Article::findAll();
         $this->view->display(__DIR__ . '/../../templates/index.php');
