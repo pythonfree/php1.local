@@ -9,10 +9,10 @@ use App\Controller;
 class Article extends Controller
 {
 
-    protected function access(): bool
-    {
-        return 'vasya' == $_GET['name'] ?: false;
-    }
+//    protected function access(): bool
+//    {
+//        return 'vasya' == $_GET['name'] ?: false;
+//    }
 
     protected function handle()
     {
